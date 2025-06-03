@@ -4,7 +4,7 @@ import 'package:dnaner/utils/style/font_style.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/flutter_percent_indicator.dart';
 
-class ProjectCardWidget extends StatelessWidget {
+class InvestmentsCard extends StatelessWidget {
   final ProjectStatus status;
   final String price;
   final String annualReturn;
@@ -13,7 +13,7 @@ class ProjectCardWidget extends StatelessWidget {
   final String opportunityNumber;
   final double progressPercent;
 
-  const ProjectCardWidget({
+  const InvestmentsCard({
     super.key,
     required this.status,
     required this.price,

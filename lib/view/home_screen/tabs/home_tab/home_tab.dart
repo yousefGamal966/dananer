@@ -21,7 +21,7 @@ class _HomeTabState extends State<HomeTab> {
           WalletBalanceCard(title: 'رصيد المحفظه', balance: '12,000,00'),
           Expanded(
             child: ListView.separated(itemBuilder:(context, index) {
-              return ProjectCardWidget(
+              return InvestmentsCard(
                 status: ProjectStatus.completed,
                 price: '8,220,000',
                 annualReturn: '18%',
