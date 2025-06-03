@@ -10,5 +10,8 @@ abstract class AppImages {
   static const String splashBackground = 'assets/images/splash_background.png';
   static const String onboardingBackground = 'assets/images/onboarding_background.png';
   static const String cardBack = 'assets/images/card_back.png';
+  static const String user = 'assets/images/svg/user.svg';
+  static const String support = 'assets/images/svg/support.svg';
+  static const String notification = 'assets/images/svg/notification.svg';
 
 }

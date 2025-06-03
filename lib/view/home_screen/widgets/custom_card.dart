@@ -29,7 +29,7 @@ class _WalletBalanceCardState extends State<WalletBalanceCard> {
           SizedBox(height: 18,),
           Text(widget.title,style:FontStyles.font14White,),
           SizedBox(height: 10,),
-          Text(widget.balance,style:FontStyles.font30White,),
+          Text(widget.balance,style:FontStyles.font30WhiteSemiBold,),
           SizedBox(height: 20,),
           Row(
 

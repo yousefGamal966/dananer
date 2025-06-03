@@ -42,7 +42,7 @@ class CustomOnboarding extends StatelessWidget {
           child: Text(
             textAlign: TextAlign.center,
             title1,
-            style: FontStyles.font32Black,
+            style: FontStyles.font32BlackSemiBold,
           ),
         ),
 

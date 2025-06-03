@@ -12,4 +12,17 @@ abstract class Lang {
   static String wallet = 'المحفظة';
   static String myInvestments = 'استثماراتي';
   static String profile = 'البروفايل';
+  static String active = 'نشطة';
+  static String soon = 'قريباً';
+  static String completed = 'مكتملة';
+  static String annualReturn = 'صافي العائد السنوي';
+  static String duration = 'المدة';
+  static String rating = 'التصنيف';
+  static String opportunityNumber = 'رقم الفرصة';
+
+  static String allOpportunities = 'كل الفرص';
+  static String opportunities = 'الفرص الإستثمارية';
+
+
+
 }

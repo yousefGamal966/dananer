@@ -2,9 +2,9 @@ import 'package:dnaner/utils/color/colors.dart';
 import 'package:dnaner/utils/localization/lang.dart';
 import 'package:dnaner/utils/models/icons.dart';
 import 'package:dnaner/utils/style/font_style.dart';
-import 'package:dnaner/view/home_screen/tabs/chances_tab/chances_tab.dart';
 import 'package:dnaner/view/home_screen/tabs/home_tab/home_tab.dart';
 import 'package:dnaner/view/home_screen/tabs/my_investments_tab/my_investments_tab.dart';
+import 'package:dnaner/view/home_screen/tabs/opportunities_tab/opportunities_tab.dart';
 import 'package:dnaner/view/home_screen/tabs/profile_tab/profile_tab.dart';
 import 'package:dnaner/view/home_screen/tabs/wallet_tab/wallet_tab.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   List<Widget> screens = [
     HomeTab(),
-    ChancesTab(),
+    OpportunitiesTab(),
     WalletTab(),
     MyInvestmentsTab(),
     ProfileTab(),

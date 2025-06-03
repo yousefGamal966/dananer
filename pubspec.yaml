@@ -39,6 +39,7 @@ dependencies:
   smooth_page_indicator: ^1.2.1
   intl: any
   percent_indicator: ^4.2.5
+  flutter_svg: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/fonts/
+    - assets/images/svg/
   fonts:
     - family: SansArabic
       fonts:

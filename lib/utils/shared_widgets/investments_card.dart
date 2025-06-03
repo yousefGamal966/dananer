@@ -1,4 +1,5 @@
 import 'package:dnaner/utils/color/colors.dart';
+import 'package:dnaner/utils/localization/lang.dart';
 import 'package:dnaner/utils/shared_widgets/custom_progress_bar.dart';
 import 'package:dnaner/utils/style/font_style.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,7 @@ class InvestmentsCard extends StatelessWidget {
                   ),
                   child: Text(
                     status.label,
-                    style: TextStyle(color: status.color, fontWeight: FontWeight.bold),
+                    style:FontStyles.font12Black.copyWith(color: status.color),
                   ),
                 ),
 
@@ -78,25 +79,38 @@ class InvestmentsCard extends StatelessWidget {
             // النسبة
             CustomProgressBar(percentage: progressPercent),
             const SizedBox(height: 8),
-            Text('${(progressPercent * 100).toStringAsFixed(0)}%'),
 
             const SizedBox(height: 12),
 
             // التفاصيل
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildInfoColumn('صافي العائد السنوي', annualReturn),
-                _buildInfoColumn('المدة', duration),
-                _buildInfoColumn('التصنيف', rating),
+                Container(height: 14,color: AppColors.lightGrey,width: 0.7,),
+
+                _buildInfoColumn(Lang.annualReturn, annualReturn),
+                Container(height: 14,color: AppColors.lightGrey,width: 0.7,),
+
+                _buildInfoColumn(Lang.duration, duration),
+                Container(height: 14,color: AppColors.lightGrey,width: 0.7,),
+
+                _buildInfoColumn(Lang.rating, rating),
+                Container(height: 14,color: AppColors.lightGrey,width: 0.7,),
+
+
               ],
             ),
+            Divider(color: AppColors.lightGrey,),
 
             const SizedBox(height: 12),
 
-            Text(
-              'رقم الفرصة: $opportunityNumber',
-              style: TextStyle(color: Colors.grey[600]),
+            Align(
+              alignment: Alignment.center,
+              child: Text(
+
+                '${Lang.opportunityNumber} : $opportunityNumber',
+                style: FontStyles.subtitle,
+              ),
             ),
           ],
         ),
@@ -105,16 +119,20 @@ class InvestmentsCard extends StatelessWidget {
   }
 
   Widget _buildInfoColumn(String title, String value) {
-    return Column(
+    return Row(
       children: [
-        Text(
-          value,
-          style: const TextStyle(fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 4),
-        Text(
-          title,
-          style: const TextStyle(color: Colors.grey),
+
+        Column(
+          children: [
+
+            Text(
+              value,
+              style: FontStyles.font14Black,        ),
+            const SizedBox(height: 4),
+            Text(
+              title,
+              style: FontStyles.subtitle,        ),
+          ],
         ),
       ],
     );
@@ -130,22 +148,22 @@ extension ProjectStatusExtension on ProjectStatus {
   String get label {
     switch (this) {
       case ProjectStatus.active:
-        return 'نشطة';
+        return Lang.active;
       case ProjectStatus.comingSoon:
-        return 'قريباً';
+        return Lang.soon;
       case ProjectStatus.completed:
-        return 'مكتملة';
+        return Lang.completed;
     }
   }
 
   Color get color {
     switch (this) {
       case ProjectStatus.active:
-        return Colors.green;
+        return AppColors.green;
       case ProjectStatus.comingSoon:
-        return Colors.yellow[700]!;
+        return AppColors.yellow;
       case ProjectStatus.completed:
-        return Colors.purple;
+        return AppColors.purple;
     }
   }
 }

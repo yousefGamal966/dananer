@@ -1,3 +1,4 @@
+import 'package:dnaner/utils/style/font_style.dart';
 import 'package:flutter/material.dart';
 
 class CustomProgressBar extends StatelessWidget {
@@ -34,21 +35,13 @@ class CustomProgressBar extends StatelessWidget {
                     width: barWidth,
                     color: progressColor,
                   ),
-                  Positioned(
-                    left: barWidth - 40, // لضبط مكان النسبة
-                    top: 0,
-                    bottom: 0,
-                    child: Container(
-                      width: 40,
-                      alignment: Alignment.centerLeft,
-                      padding: EdgeInsets.only(right: 4),
-                      child: Text(
-                        '${percentage.toInt()}%',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                  Container(
+                    width: barWidth,
+                    alignment: Alignment.bottomLeft,
+                    padding: EdgeInsets.only(right: 4,left: 4),
+                    child: Text(
+                      '${percentage.toInt()}%',
+                      style: FontStyles.font14White,
                     ),
                   ),
                 ],
